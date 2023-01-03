@@ -9,7 +9,7 @@ function handleServer(req, res) {
   
  switch(req.url){
   case "/welcome":
-    res.writeHead(200);
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end("Welcome to Dominos !");
     break;
   case "/contact":
