@@ -20,7 +20,8 @@ function handleServer(req, res) {
     }));
     break;
   default:
-    res.writeHead(404);
+    res.writeHead(404, {'Content-Type': 'text/plain'});
+    res.end("Not found");
  }
 }
 httpServer.listen(PORT);
